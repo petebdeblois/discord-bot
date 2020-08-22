@@ -3,6 +3,7 @@ const eightBall = require('./8ball');
 const fortune = require('./fortune');
 const uptime = require('./uptime');
 const urban = require('./urban');
+const f1 = require('./f1');
 
 const guildID = process.env.GUILD_ID;
 const channelID = process.env.CHANNEL_ID;
@@ -12,7 +13,8 @@ const commands = {
     '8ball': eightBall,
     fortune,
     uptime,
-    urban
+    urban,
+    f1
 };
 
 module.exports = async (msg) => {
