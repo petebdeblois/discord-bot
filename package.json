@@ -5,14 +5,16 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint src/",
-    "start": "node src/index.js"
+    "start": "node --trace-warnings src/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.20.0",
     "countdown": "^2.6.0",
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "fortune-tweetable": "^1.0.0",
     "node-fetch": "^2.6.0",
     "querystring": "^0.2.0"
