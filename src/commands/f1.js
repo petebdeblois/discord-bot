@@ -17,12 +17,12 @@ module.exports = async (msg) => {
 
     const data = axios(config)
         .then(function (response) {
-            let datap = JSON.stringify(response.data);
-            console.log(datap);
+            let datap = response.data;
+            console.log(datap['MRData']);
             const embed = new Discord.MessageEmbed()
-                .setColor('#e134eb')
-                .setTitle(datap)
-                .setURL(data.url);
+                .setColor("#e134eb")
+                .setTitle(datap["MRData"]["series"])
+                .setURL(datap["MRData"]["url"]);
             /*
     .addFields({
         name: 'Definition',
@@ -50,7 +50,7 @@ module.exports = async (msg) => {
         .catch((error) => {
             console.error('Error:', error);
         });
-    */  
+    */
     //const [answer] = data;
     /*
     const embed = new Discord.MessageEmbed()
