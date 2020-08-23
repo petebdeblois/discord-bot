@@ -1,11 +1,8 @@
 const Discord = require('discord.js');
-//const fetch = require('node-fetch');
+
 
 var axios = require('axios');
-const {
-    json
-} = require('express');
-// const trim = (str, max) => str.length > max ? `${str.slice(0, max - 3)}...` : str;
+
 
 
 module.exports = async (msg) => {
@@ -20,21 +17,20 @@ module.exports = async (msg) => {
             let datap = response.data;
             console.log(datap['MRData']);
             const embed = new Discord.MessageEmbed()
-                .setColor("#e134eb")
-                .setTitle(datap["MRData"]["series"])
-                .setURL(datap["MRData"]["url"]);
-            /*
-    .addFields({
-        name: 'Definition',
-        value: trim(answer.definition, 1024),
-    }, {
-        name: 'Example',
-        value: trim(answer.example, 1024),
-    }, {
-        name: 'Rating',
-        value: `${answer.thumbs_up} thumbs up. ${answer.thumbs_down} thumbs down.`,
-    });
-    */
+                .setColor('#e134eb')
+                .setTitle('Last Race Result ' + datap['MRData']['RaceTable']['Races'][0]['raceName'])
+                .setURL(datap['MRData']['RaceTable']['Races'][0]['raceName'])
+                .addFields({
+                    name: 'Circuit',
+                    value: datap['MRData']['RaceTable']['Races'][0]['Circuit']['circuitName'],
+                }, {
+                    name: 'Date',
+                    value: datap['MRData']['RaceTable']['Races']['data'],
+                }, {
+                    name: 'Rating',
+                    value: 'yo',
+                });
+
             msg.channel.send(embed);
         })
         .catch((error) => {
