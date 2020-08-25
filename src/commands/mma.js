@@ -3,7 +3,7 @@ var sherdog = require('sherdog');
 const Discord = require('discord.js');
 
 module.exports = async (msg) => {
-    var url = 'http://www.sherdog.com/fighter/Matt-Riddle-34072';
+    var url = 'https://www.sherdog.com/fighter/Daniel-Cormier-52311';
     sherdog.getFighter(url, function (data) {
         console.log(data);
         const embed = new Discord.MessageEmbed()

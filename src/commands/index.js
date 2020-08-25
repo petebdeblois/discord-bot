@@ -3,7 +3,7 @@ const eightBall = require('./8ball');
 const fortune = require('./fortune');
 const uptime = require('./uptime');
 const urban = require('./urban');
-const f1 = require('./f1');
+const f1last = require('./f1last');
 const mma = require('./mma');
 
 const guildID = process.env.GUILD_ID;
@@ -15,7 +15,7 @@ const commands = {
     fortune,
     uptime,
     urban,
-    f1,
+    f1last,
     mma
 };
 
