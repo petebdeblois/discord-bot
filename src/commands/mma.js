@@ -1,24 +1,24 @@
 
-var sherdog = require('sherdog');
-const Discord = require('discord.js');
+var sherdog = require("sherdog");
+const Discord = require("discord.js");
 
 module.exports = async (msg) => {
-    var url = 'https://www.sherdog.com/fighter/Daniel-Cormier-52311';
+    var url = "https://www.sherdog.com/fighter/Daniel-Cormier-52311";
     sherdog.getFighter(url, function (data) {
         console.log(data);
         const embed = new Discord.MessageEmbed()
-            .setColor('#e134eb')
-            .setTitle(data['name'])
+            .setColor("#e134eb")
+            .setTitle(data["name"])
             .setURL(url)
             .addFields({
-                name: 'Age',
-                value: data['age'],
+                name: "Age",
+                value: data["age"],
             }, {
-                name: 'association',
-                value: data['association'],
+                name: "association",
+                value: data["association"],
             }, {
-                name: 'Rating',
-                value: 'yo',
+                name: "Rating",
+                value: "yo",
             });
         msg.channel.send(embed);
     });

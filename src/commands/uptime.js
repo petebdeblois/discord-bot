@@ -1,4 +1,4 @@
-const countdown = require('countdown');
+const countdown = require("countdown");
 const bootTime = new Date();
 
 /* module.exports = {
@@ -20,5 +20,5 @@ module.exports = async (msg) => {
             bootTime
         )}`
     );
-    console.log('uptime');
+    console.log("uptime");
 };

@@ -1,4 +1,4 @@
-const fortune = require('fortune-tweetable');
+const fortune = require("fortune-tweetable");
 /*
 module.exports = {
     name: 'fortune',
@@ -11,5 +11,5 @@ module.exports = {
 */
 module.exports = async (msg) => {
     await msg.channel.send(fortune.fortune());
-    console.log('fortune');
+    console.log("fortune");
 };
