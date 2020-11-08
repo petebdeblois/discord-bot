@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
-
-var axios = require("axios");
+const  axios = require("axios");
 
 module.exports = async (msg, args) => {
     console.log("args: " + args[0]);

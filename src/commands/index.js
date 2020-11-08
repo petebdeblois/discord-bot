@@ -16,7 +16,8 @@ const commands = {
     uptime,
     urban,
     f1,
-    mma
+    mma,
+    update 
 };
 
 module.exports = async (msg) => {
